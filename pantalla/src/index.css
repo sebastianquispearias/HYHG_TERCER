@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif; /* Cambio a Roboto para un aspecto más moderno */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f9fa; /* Un fondo claro, pero no completamente blanco */
+  color: #333; /* Color de texto más suave que el negro puro */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700; /* Títulos más audaces */
+}
+
+a {
+  color: #007bff; /* Un azul estándar para enlaces */
+  text-decoration: none; /* Sin subrayado en enlaces */
+}
+
+a:hover {
+  text-decoration: underline; /* Subrayado al pasar el mouse para mejor accesibilidad */
+}
+
+button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Estilos adicionales para otros elementos pueden ir aquí */

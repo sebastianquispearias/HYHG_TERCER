@@ -1,0 +1,96 @@
+/* Estilos adicionales para la barra de navegación */
+.navbar {
+  background-color: #fdeeee; /* Fondo blanco para la barra de navegación */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+}
+
+.nav-link {
+  color: rgba(14, 164, 234, 0.043); /* Color de enlace suave */
+}
+
+.nav-link:hover {
+  color: #007bff; /* Color de enlace al pasar el mouse */
+}
+
+/* Estilos para el título principal */
+.main-title {
+  color: #333; /* Color de texto oscuro para contraste */
+  margin-bottom: 20px; /* Espaciado debajo del título */
+}
+
+/* Estilos para el contenedor principal */
+.main-container {
+  padding: 40px; /* Espaciado interno */
+}
+
+/* Estilos para el botón personalizado */
+.custom-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #0056b3;
+}
+
+.file-input {
+  display: none;
+}
+
+/* Estilos para el mensaje de archivo seleccionado */
+.custom-button::before {
+  content: 'Selecciona o arrastra un archivo aquí';
+  display: block;
+  text-align: center;
+  line-height: 45px;
+}
+
+/* Estilos para cuando se selecciona un archivo */
+.custom-button input[type="file"]:valid + &::before {
+  content: attr(data-file-name);
+}
+
+/* Estilos para centrar el mensaje debajo de la imagen */
+.file-upload-container {
+  text-align: center;
+  margin-top: 80px; /* Espaciado superior */
+}
+/* Estilos para el pie de página */
+.footer {
+  background-color: #292727; /* Fondo oscuro para el pie de página */
+  color: #291a1a; /* Color de texto blanco */
+  text-align: justify; /* Centra el texto en el pie de página */
+  padding: 20px 0; /* Espaciado interior arriba y abajo */
+  position: absolute; /* Posición absoluta para fijar el pie de página en la parte inferior */
+  bottom: 0; /* Coloca el pie de página en la parte inferior */
+  width: 100%; /* Ocupa todo el ancho */
+}
+
+/* Estilos para el enlace en el pie de página */
+.footer a {
+  color: #1e5b9c; /* Color de enlace en el pie de página */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  margin: 0 10px; /* Espaciado entre los enlaces */
+  font-weight: bold; /* Texto en negrita para los enlaces */
+}
+
+/* Estilos para los enlaces en el pie de página al pasar el mouse */
+.footer a:hover {
+  text-decoration: underline; /* Subraya los enlaces al pasar el mouse */
+}
+/* Estilos adicionales para el pie de página */
+.footer {
+  background-color: #dfd6d6;
+  color: #fff;
+  text-align: left;
+  padding: 2px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

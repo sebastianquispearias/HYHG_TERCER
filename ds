@@ -1,0 +1,120 @@
+[33mcommit 3f8156cf1964b9c33aecad4de3fe94ffdb4c767a[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: sebastianquispearias <sebastianquispe1000367@gmail.com>
+Date:   Wed Nov 15 16:24:06 2023 -0500
+
+    Agregando archivos del proyecto, excluyendo node_modules
+
+ .gitignore                                         |     1 [32m+[m
+ .gitmodules                                        |     0
+ backend copy/app.js                                |    23 [32m+[m
+ backend copy/node_modules/.bin/mkdirp              |    12 [32m+[m
+ backend copy/node_modules/.bin/mkdirp.cmd          |    17 [32m+[m
+ backend copy/node_modules/.bin/mkdirp.ps1          |    28 [32m+[m
+ backend copy/node_modules/.package-lock.json       |   198 [32m+[m
+ backend copy/node_modules/append-field/.npmignore  |     1 [32m+[m
+ backend copy/node_modules/append-field/LICENSE     |    21 [32m+[m
+ backend copy/node_modules/append-field/README.md   |    44 [32m+[m
+ backend copy/node_modules/append-field/index.js    |    12 [32m+[m
+ .../node_modules/append-field/lib/parse-path.js    |    53 [32m+[m
+ .../node_modules/append-field/lib/set-value.js     |    64 [32m+[m
+ .../node_modules/append-field/package.json         |    19 [32m+[m
+ .../node_modules/append-field/test/forms.js        |    19 [32m+[m
+ backend copy/node_modules/buffer-from/LICENSE      |    21 [32m+[m
+ backend copy/node_modules/buffer-from/index.js     |    72 [32m+[m
+ backend copy/node_modules/buffer-from/package.json |    19 [32m+[m
+ backend copy/node_modules/buffer-from/readme.md    |    69 [32m+[m
+ backend copy/node_modules/busboy/.eslintrc.js      |     5 [32m+[m
+ .../node_modules/busboy/.github/workflows/ci.yml   |    24 [32m+[m
+ .../node_modules/busboy/.github/workflows/lint.yml |    23 [32m+[m
+ backend copy/node_modules/busboy/LICENSE           |    19 [32m+[m
+ backend copy/node_modules/busboy/README.md         |   191 [32m+[m
+ .../bench/bench-multipart-fields-100mb-big.js      |   149 [32m+[m
+ .../bench/bench-multipart-fields-100mb-small.js    |   143 [32m+[m
+ .../bench/bench-multipart-files-100mb-big.js       |   154 [32m+[m
+ .../bench/bench-multipart-files-100mb-small.js     |   148 [32m+[m
+ .../bench-urlencoded-fields-100pairs-small.js      |   101 [32m+[m
+ .../bench-urlencoded-fields-900pairs-small-alt.js  |    84 [32m+[m
+ backend copy/node_modules/busboy/lib/index.js      |    57 [32m+[m
+ .../node_modules/busboy/lib/types/multipart.js     |   653 [32m+[m
+ .../node_modules/busboy/lib/types/urlencoded.js    |   350 [32m+[m
+ backend copy/node_modules/busboy/lib/utils.js      |   596 [32m+[m
+ backend copy/node_modules/busboy/package.json      |    22 [32m+[m
+ backend copy/node_modules/busboy/test/common.js    |   109 [32m+[m
+ .../busboy/test/test-types-multipart-charsets.js   |    94 [32m+[m
+ .../test/test-types-multipart-stream-pause.js      |   102 [32m+[m
+ .../busboy/test/test-types-multipart.js            |  1053 [32m++[m
+ .../busboy/test/test-types-urlencoded.js           |   488 [32m+[m
+ backend copy/node_modules/busboy/test/test.js      |    20 [32m+[m
+ backend copy/node_modules/concat-stream/LICENSE    |    24 [32m+[m
+ backend copy/node_modules/concat-stream/index.js   |   144 [32m+[m
+ .../node_modules/concat-stream/package.json        |    55 [32m+[m
+ backend copy/node_modules/concat-stream/readme.md  |   102 [32m+[m
+ backend copy/node_modules/core-util-is/LICENSE     |    19 [32m+[m
+ backend copy/node_modules/core-util-is/README.md   |     3 [32m+[m
+ backend copy/node_modules/core-util-is/lib/util.js |   107 [32m+[m
+ .../node_modules/core-util-is/package.json         |    38 [32m+[m
+ backend copy/node_modules/inherits/LICENSE         |    16 [32m+[m
+ backend copy/node_modules/inherits/README.md       |    42 [32m+[m
+ backend copy/node_modules/inherits/inherits.js     |     9 [32m+[m
+ .../node_modules/inherits/inherits_browser.js      |    27 [32m+[m
+ backend copy/node_modules/inherits/package.json    |    29 [32m+[m
+ backend copy/node_modules/isarray/.npmignore       |     1 [32m+[m
+ backend copy/node_modules/isarray/.travis.yml      |     4 [32m+[m
+ backend copy/node_modules/isarray/Makefile         |     6 [32m+[m
+ backend copy/node_modules/isarray/README.md        |    60 [32m+[m
+ backend copy/node_modules/isarray/component.json   |    19 [32m+[m
+ backend copy/node_modules/isarray/index.js         |     5 [32m+[m
+ backend copy/node_modules/isarray/package.json     |    45 [32m+[m
+ backend copy/node_modules/isarray/test.js          |    20 [32m+[m
+ backend copy/node_modules/media-typer/HISTORY.md   |    22 [32m+[m
+ backend copy/node_modules/media-typer/LICENSE      |    22 [32m+[m
+ backend copy/node_modules/media-typer/README.md    |    81 [32m+[m
+ backend copy/node_modules/media-typer/index.js     |   270 [32m+[m
+ backend copy/node_modules/media-typer/package.json |    26 [32m+[m
+ backend copy/node_modules/mime-db/HISTORY.md       |   507 [32m+[m
+ backend copy/node_modules/mime-db/LICENSE          |    23 [32m+[m
+ backend copy/node_modules/mime-db/README.md        |   100 [32m+[m
+ backend copy/node_modules/mime-db/db.json          |  8519 [32m+++++++++++++[m
+ backend copy/node_modules/mime-db/index.js         |    12 [32m+[m
+ backend copy/node_modules/mime-db/package.json     |    60 [32m+[m
+ backend copy/node_modules/mime-types/HISTORY.md    |   397 [32m+[m
+ backend copy/node_modules/mime-types/LICENSE       |    23 [32m+[m
+ backend copy/node_modules/mime-types/README.md     |   113 [32m+[m
+ backend copy/node_modules/mime-types/index.js      |   188 [32m+[m
+ backend copy/node_modules/mime-types/package.json  |    44 [32m+[m
+ backend copy/node_modules/minimist/.eslintrc       |    29 [32m+[m
+ .../node_modules/minimist/.github/FUNDING.yml      |    12 [32m+[m
+ backend copy/node_modules/minimist/.nycrc          |    14 [32m+[m
+ backend copy/node_modules/minimist/CHANGELOG.md    |   298 [32m+[m
+ backend copy/node_modules/minimist/LICENSE         |    18 [32m+[m
+ backend copy/node_modules/minimist/README.md       |   121 [32m+[m
+ .../node_modules/minimist/example/parse.js         |     4 [32m+[m
+ backend copy/node_modules/minimist/index.js        |   263 [32m+[m
+ backend copy/node_modules/minimist/package.json    |    75 [32m+[m
+ .../node_modules/minimist/test/all_bool.js         |    34 [32m+[m
+ backend copy/node_modules/minimist/test/bool.js    |   177 [32m+[m
+ backend copy/node_modules/minimist/test/dash.js    |    43 [32m+[m
+ .../node_modules/minimist/test/default_bool.js     |    37 [32m+[m
+ backend copy/node_modules/minimist/test/dotted.js  |    24 [32m+[m
+ .../node_modules/minimist/test/kv_short.js         |    32 [32m+[m
+ backend copy/node_modules/minimist/test/long.js    |    33 [32m+[m
+ backend copy/node_modules/minimist/test/num.js     |    38 [32m+[m
+ backend copy/node_modules/minimist/test/parse.js   |   209 [32m+[m
+ .../node_modules/minimist/test/parse_modified.js   |    11 [32m+[m
+ backend copy/node_modules/minimist/test/proto.js   |    64 [32m+[m
+ backend copy/node_modules/minimist/test/short.js   |    69 [32m+[m
+ .../node_modules/minimist/test/stop_early.js       |    17 [32m+[m
+ backend copy/node_modules/minimist/test/unknown.js |   104 [32m+[m
+ .../node_modules/minimist/test/whitespace.js       |    10 [32m+[m
+ backend copy/node_modules/mkdirp/LICENSE           |    21 [32m+[m
+ backend copy/node_modules/mkdirp/bin/cmd.js        |    33 [32m+[m
+ backend copy/node_modules/mkdirp/bin/usage.txt     |    12 [32m+[m
+ backend copy/node_modules/mkdirp/index.js          |   102 [32m+[m
+ backend copy/node_modules/mkdirp/package.json      |    33 [32m+[m
+ backend copy/node_modules/mkdirp/readme.markdown   |   100 [32m+[m
+ backend copy/node_modules/multer/LICENSE           |    17 [32m+[m
+ backend copy/node_modules/multer/README.md         |   333 [32m+[m
+ backend copy/node_modules/multer/index.js          |   104 [32m+[m
+ backend copy/node_modules/multer/lib/counter.js    |    28 [32m+[m
+ .../node_modules/multer/lib/file-appender.js       |    67 [32m+[m
+ ...
